@@ -1,0 +1,1 @@
+On the starting and ending screen, press SPACE to play. Control the player on the left with W and S and the player on the left with the UP and DOWN keys. The player who scores 10 goals first wins.

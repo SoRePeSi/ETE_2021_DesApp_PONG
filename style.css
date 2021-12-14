@@ -1,0 +1,37 @@
+*{
+	background-color: black;
+	color: white;
+}
+
+canvas{
+	position: absolute;
+	border: 2px solid white;
+	height: 80%;
+	width: 80%;
+	left: 10%;
+	right: 10%;
+	top: 10%;
+	bottom: 10%;
+}
+
+h1{
+	width: 100%;
+	text-align: center;
+}
+
+#round{
+	width: 20%;
+	font-size: 120%;
+}
+
+#p1, #p2{
+	width: 40%;
+}
+
+span{
+	margin: 2%;
+}
+
+button{
+	z-index: 10;
+}
