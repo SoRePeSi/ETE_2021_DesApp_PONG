@@ -1,7 +1,5 @@
-// CP NÃO SE MEXE direito NO JOGO SOZINHO
-// 4 jogadores
-// I broke the game
-// Ending screen doesn't show and music doesn't play
+// Single Player mode not working
+// Ball position doesn't reset - fix this
 
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
@@ -16,7 +14,7 @@ function resize(){
 resize();
 
 // Variáveis para definição de movimento e pontuação dos jogadores
-// Variables for the players' movement and score definition
+// Variables for players' movement and score definition
 var speed = 0;
 
 var pressedKey = 0;
@@ -67,10 +65,6 @@ window.addEventListener("keydown", function keyPressed(event){
 			GoleiroDireito.playerDown = true;
 		}
 	}
-	if(pressedKey==37){}
-	if(pressedKey==39){}
-	if(pressedKey==65){}
-	if(pressedKey==69){}
 });
 window.addEventListener("keyup", function keyReleased(event){
 	releasedKey = event.which;
@@ -170,8 +164,7 @@ function Bola(){
 			fundo = canvas.height/2;
 		}
 
-		/*
-		if(playerNumber==1){
+		/*if(playerNumber==1){
 			if(GoleiroDireito.posY<=topo){
 				ciclo = 2;
 			}
@@ -187,8 +180,7 @@ function Bola(){
 				rightDown = false;
 				rightUp = true;
 			}
-		}
-		*/
+		}*/
 	}
 	ballDraw();
 
@@ -323,8 +315,8 @@ function telaEscrita(inifin){
 	c.textAlign = "center";
 
 	if(inifin=="I"){
-		c.fillText("Press SPACE to play", canvas.width/2, canvas.height*1/3);
-		c.fillText("Press H to play alone", canvas.width/2, canvas.height*2/3);
+		c.fillText("Press SPACE to play", canvas.width/2, canvas.height*1/2/*1/3*/);
+		//c.fillText("Press H to play alone", canvas.width/2, canvas.height*2/3);
 	}
 	else{
 		if(playerNumber==2){
@@ -345,20 +337,14 @@ function telaEscrita(inifin){
 				playerNumber = 2;
 				speed = window.innerHeight/50;
 				animate();
-			}
-			else if(event.which==104){
+			}/*
+			else if(event.which==72||event.which==104){
 				gameOver = false;
 				resetAll();
 				playerNumber = 1;
 				speed = window.innerHeight/75;
 				animate();
-			}
-			else if(event.which==71){
-				resetAll();
-				playerNumber = 4;
-				speed = window.innerHeight/75;
-				animate();
-			}
+			}*/
 		}
 	});
 }
