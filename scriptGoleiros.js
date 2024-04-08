@@ -321,12 +321,12 @@ function telaEscrita(inifin){
 	else{
 		if(playerNumber==2){
 			c.fillText("Press SPACE to play again", canvas.width/2, canvas.height*1/3);
-			c.fillText("Press H to play alone", canvas.width/2, canvas.height*2/3);
-		}
+			//c.fillText("Press H to play alone", canvas.width/2, canvas.height*2/3);
+		}/*
 		else{
 			c.fillText("Press SPACE to play against a friend", canvas.width/2, canvas.height*1/3);
 			c.fillText("Press H to play alone again", canvas.width/2, canvas.height*2/3);
-		}
+		}*/
 	}
 
 	window.addEventListener("keypress", function(){
@@ -351,6 +351,7 @@ function telaEscrita(inifin){
 
 function resetAll(){
 	nggyuLoop = false;
+	nggyuLoop.currentTime = 0;
 	document.getElementById("musiquinha").pause();
 
 	gols = [0, 0];
@@ -364,7 +365,10 @@ function resetAll(){
 	GoleiroEsquerdo.playerWidth = window.innerWidth/50;
 	GoleiroEsquerdo.playerHeight = window.innerHeight/5;
 	GoleiroEsquerdo.posX = canvas.width/10;
-	GoleiroEsquerdo.posY = canvas.height/2-GoleiroEsquerdo.playerHeight/2;
+	GoleiroEsquerdo.posY = canvas.height / 2 - GoleiroEsquerdo.playerHeight / 2;
+
+	Bola.ballX = window.innerWidth / 2;
+	Bola.ballY = window.innerHeight / 2;
 }
 
 // Executa animação dos jogadores
